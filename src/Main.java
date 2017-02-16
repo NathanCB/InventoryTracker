@@ -6,14 +6,8 @@ public class Main {
     static ArrayList<PaintBrushStock> paintBrushes = new ArrayList<>();
 
     public static void main(String[] args) {
-
-        String oldStockItem;
-        Integer oldStockQuantity;
-        String brushName;
-
         while (true) {
             processInv();
-
         }
     }
     private static void processInv() {
@@ -27,22 +21,21 @@ public class Main {
             String brush = scanner.nextLine();
             PaintBrushStock brushType = new PaintBrushStock(brush, 100);
             paintBrushes.add(brushType);
-
         } else if (option.equals("2")) {
-            System.out.println("Remove item by item index number.");
-            int itemNumIndex = paintBrushes.size();
+            System.out.println("Remove item by number.");
+            int i = 1;
             for (PaintBrushStock stock : paintBrushes) {
-                System.out.println(itemNumIndex + " " + stock.brush + " " + stock.brushQuantity);
+                System.out.println(i + " " + stock.brushType + " " + stock.brushQuantity);
+                i++;
             }
             paintBrushes.remove(Integer.parseInt(scanner.nextLine()));
         } else if (option.equals("3")) {
-            System.out.println(paintBrushes.size());
             Integer i = 1;
             for (PaintBrushStock stock : paintBrushes) {
-                System.out.println((i) + " " + stock.brush + " " + stock.brushQuantity);
+                System.out.println((i) + " " + stock.brushType + " " + stock.brushQuantity);
                 i++;
             }
-            System.out.println("Choose which item to change.");
+            System.out.println("Choose which item to change by number.");
             Integer itemNumChoice = Integer.parseInt(scanner.nextLine());
             PaintBrushStock p = paintBrushes.get(itemNumChoice - 1);
 
@@ -50,7 +43,6 @@ public class Main {
             Integer brushQuantityAdj = Integer.parseInt(scanner.nextLine());
             p.brushQuantity = brushQuantityAdj;
         }
-
     }
 }
 

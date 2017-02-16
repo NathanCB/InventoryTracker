@@ -1,39 +1,11 @@
-/**
- * Created by nathanbutler on 2/6/17.
- */
+
 public class PaintBrushStock {
-    String brush;
+    String brushType;
     Integer brushQuantity;
-//    Integer brushInvNum;
+    String category;
 
-
-    public PaintBrushStock(String brush, Integer brushQuantity) {
-        this.brush = brush;
+    public PaintBrushStock(String brushType, Integer brushQuantity) {
+        this.brushType = brushType;
         this.brushQuantity = brushQuantity;
     }
-    /*
-    for(PaintBrushStock stock : paintBrushes) {
-        System.out.println(stock.brush + " " + stock.brushQuantity);
-    }
-    */
-
-//    public void brushInvNum(){
-//        this.brushInvNum = brushInvNum;
-//        System.out.println(brushInvNum);
-//    }
-    /*
-        if(...4){
-            for(int i=0; i < paintBrushes.size(); i++) {
-                System.out.println(paintBrushes.get());
-            }
-
-        */
-        /*
-        else if(option.equals("2")){
-            System.out.println("Remove item from stock.");
-            String brush = scanner.nextLine();
-        }
-        */
-
-
 }
